@@ -14,7 +14,7 @@ public enum NetworkAccessibilityStatus {
     case unreachable
 }
 
-protocol NetworkAccessibilityProvider {
+public protocol NetworkAccessibilityProvider {
     
     var status: NetworkAccessibilityStatus { get set }
     

@@ -21,7 +21,7 @@ import Foundation
 /// - requestEntityTooLarge: Specifies errors where the request being sent is too large to be processed.
 /// - responseParseError: Specifies errors where the response being received is not able to be parsed by the network/api processor.
 /// - unknownError: Specifies all other errors that have not been defined.
-enum ApiError: Error, Equatable, CustomStringConvertible{
+public enum ApiError: Error, Equatable, CustomStringConvertible{
     case apiError(message: String, errorName: String?, code: Int?)
     case badRequest
     case unauthorized

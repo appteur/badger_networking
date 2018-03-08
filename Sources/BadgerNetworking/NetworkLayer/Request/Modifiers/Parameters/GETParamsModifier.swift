@@ -8,7 +8,7 @@
 
 import Foundation
 
-class GetParamsModifier: NetworkRequestModifier {
+public class GetParamsModifier: NetworkRequestModifier {
     
     var params: [String : Any]
     

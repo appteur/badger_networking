@@ -12,7 +12,7 @@ import Foundation
 /*
     Provides high level processing for requests. The type that applies to all requests.
  */
-class NetworkSession: NetworkRequestHandler {
+public class NetworkSession: NetworkRequestHandler {
     
     /// The remote configuration for this network session.
     var configuration: RemoteConfig?

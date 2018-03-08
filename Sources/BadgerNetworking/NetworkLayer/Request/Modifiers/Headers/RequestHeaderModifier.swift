@@ -9,7 +9,7 @@ import Foundation
 
 /// Defines a request modifier that sets a dictionary of values on the request
 /// as request headers.
-class RequestHeaderModifier: NetworkRequestModifier {
+public class RequestHeaderModifier: NetworkRequestModifier {
     
     var headers: [String: String]
     init(_ headers: [String: String]) {

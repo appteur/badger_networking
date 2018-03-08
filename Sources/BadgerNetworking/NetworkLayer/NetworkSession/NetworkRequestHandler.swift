@@ -9,7 +9,7 @@
 import Foundation
 
 // Defines interface for the network class to implement.
-protocol NetworkRequestHandler {
+public protocol NetworkRequestHandler {
 
     
     /// An implementation of this protocol should include a way to process (or stub possibly) requests and return

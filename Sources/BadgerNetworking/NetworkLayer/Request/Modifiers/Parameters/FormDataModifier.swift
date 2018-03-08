@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FormDataModifier: NetworkRequestModifier {
+public class FormDataModifier: NetworkRequestModifier {
     
     var postParams: [String : Any]?
     var postData: Data?

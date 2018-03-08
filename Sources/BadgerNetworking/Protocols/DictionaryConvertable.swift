@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol DictionaryConvertable {
+public protocol DictionaryConvertable {
     func toDictionary() -> [String : Any]?
 }

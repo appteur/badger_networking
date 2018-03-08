@@ -10,7 +10,7 @@ import Foundation
 import Cocoa
 
 /// Defines an interface for classes to implement to provide network accessibility.
-protocol NetworkRequestProvider {
+public protocol NetworkRequestProvider {
     
     // A configuration object specifying the host and other parameters necessary for making network requests.
     var configuration: RemoteConfig { get set }

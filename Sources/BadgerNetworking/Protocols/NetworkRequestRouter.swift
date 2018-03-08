@@ -11,7 +11,7 @@ import Cocoa
 
 
 /// Specifies functionality that should be implemented in objects providing routing information for api requests.
-protocol NetworkRequestRouter {
+public protocol NetworkRequestRouter {
     /// Defines modifiers that should be used for requests sent to a remote api. They can be global and cover all requests or be configured separately for each request as needed.
     var requestModifiers: [NetworkRequestModifier] { get }
     

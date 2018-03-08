@@ -17,6 +17,6 @@ public protocol JSONInitable {
     init(json: [String: Any]) throws
 }
 
-protocol ObjectSerializer {
+public protocol ObjectSerializer {
     func value(in dict: [String: Any]) throws -> Any
 }

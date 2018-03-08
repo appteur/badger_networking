@@ -10,7 +10,7 @@ import Foundation
 
 
 /// Defines an interface to implement in objects that provide customization of URLRequest objects when they are being generated/configured before being sent to a remote api.
-protocol NetworkRequestModifier {
+public protocol NetworkRequestModifier {
     
     /// Conforming objects need to implement this function and provide logic to configure the request in any way necessary. This could be modifying headers, setting the body or other valid functionality to customize a URLRequest object before sending to a remote api.
     ///

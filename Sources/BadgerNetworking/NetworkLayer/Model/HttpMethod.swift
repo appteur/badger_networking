@@ -9,7 +9,7 @@
 import Foundation
 
 /// Provides http methods as an enum for easier use throughout the networking library.
-enum HttpMethod: String {
+public enum HttpMethod: String {
     case head = "HEAD"
     case get = "GET"
     case post = "POST"

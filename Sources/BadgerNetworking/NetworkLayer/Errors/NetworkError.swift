@@ -15,7 +15,7 @@ import Foundation
 /// - requestError: Specifies generic errors with the server request.
 /// - responseError: Specifies any kind of response errors.
 /// - networkUnreachable: Specifies errors where the request is unable to be sent due to network connectivity issues.
-enum NetworkError: Error {
+public enum NetworkError: Error {
     case invalidRequest
     case requestError
     case responseError
