@@ -46,7 +46,7 @@ extension NetworkRequestRouter {
     ///   - config: An instance of RemoteConfig specifying info necessary to connect to a remote host.
     ///   - params: A dictionary of parameters to be sent with a request. This can include Data objects as values, if that is the case then 'FormData' should be specified as the type of NetworkRequestModifier to use in generating the body for this request in the 'addParams' function of the implementing object. (See AppApiRouter object for an example)
     /// - Returns: Sets up and returns a configured URLRequest object to use in making a network request.
-    func urlRequest(forConfig config: RemoteConfig, params: [String : Any]? = nil, headers: [String : String]? = nil) -> URLRequest {
+    public func urlRequest(forConfig config: RemoteConfig, params: [String : Any]? = nil, headers: [String : String]? = nil) -> URLRequest {
         
         guard var hostComponents = config.baseURLComponents else {
             fatalError("Unable to make a request with a nil base url or path")
@@ -90,14 +90,14 @@ extension NetworkRequestRouter {
     ///
     /// - Parameter headers: A dictionary of headers to add to a request.
     /// - Returns: Returns a request modifier object that will be used to update the request.
-    func addHeaders(_ headers: [String : String]) -> NetworkRequestModifier {
+    public func addHeaders(_ headers: [String : String]) -> NetworkRequestModifier {
         return RequestHeaderModifier.init(headers)
     }
     
     /// If called on a GET request this function updates the request url with the provided parameters, otherwise it creates a json string representation of the passed in parameters and sets the request body with this data. 
     /// Generates a POST body, FormData body, GET request string or any custom provided behavior in a conforming class that overrides this implementation.
     /// Override this function in your conforming object to specify custom behaviors.
-    func addParams(_ params: [String : Any]) -> NetworkRequestModifier {
+    public func addParams(_ params: [String : Any]) -> NetworkRequestModifier {
         switch method {
         case .get:
             // return a get parameters modifier for all get requests

@@ -64,7 +64,7 @@ extension HTTPStatusHandler {
     ///
     /// - Parameter status: The http status code for a given url response.
     /// - Returns: If the status code received falls within any of the ranges specified in the 'status' property of the implementing object then this function will return a 'true' response, else the response will be 'false'.
-    func canProcessStatus(_ status: Int) -> Bool {
+    public func canProcessStatus(_ status: Int) -> Bool {
         
         // iterate our ranges and see if the status code ranges contain this status code
         for range in self.status {
