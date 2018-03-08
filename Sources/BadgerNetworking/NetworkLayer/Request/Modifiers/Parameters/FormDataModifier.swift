@@ -14,9 +14,9 @@ public class FormDataModifier: NetworkRequestModifier {
     var postData: Data?
     
     var fileType: String = ""
-    var contentType: String?
+    public var contentType: String?
     
-    init(params: [String : Any], fileType: String = "image/png") {
+    public init(params: [String : Any], fileType: String = "image/png") {
         postParams = params
         self.fileType = fileType
         toFormData()
@@ -66,7 +66,7 @@ public class FormDataModifier: NetworkRequestModifier {
     }
     
     
-    func configure(request: inout URLRequest, with config: RemoteConfig) {
+    public func configure(request: inout URLRequest, with config: RemoteConfig) {
         guard let body = postData else {
             return
         }

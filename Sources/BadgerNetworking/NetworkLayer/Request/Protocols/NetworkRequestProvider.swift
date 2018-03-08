@@ -62,7 +62,7 @@ extension NetworkRequestProvider {
     /// - Parameters:
     ///   - path: The path to the image resource
     ///   - completion: On success/fail either a valid image will be returned or an error thrown.
-    func fetchImage(path: String, completion: @escaping (NSImage?, Error?) -> Void) {
+    public func fetchImage(path: String, completion: @escaping (NSImage?, Error?) -> Void) {
         networkLayer.fetchImage(path: path, completion: { (data) in
             guard let data = data, let image = NSImage.init(data: data) else {
                 print("AppApi fetchImage - nil data received or unable to create image for path: [\(path)")
@@ -74,7 +74,7 @@ extension NetworkRequestProvider {
     }
 
     // currently unused, may be used in the future.
-    func processError(error: Error?) -> Bool {
+    public func processError(error: Error?) -> Bool {
         print("Response Error: \(String(describing: error))")
         return false
     }

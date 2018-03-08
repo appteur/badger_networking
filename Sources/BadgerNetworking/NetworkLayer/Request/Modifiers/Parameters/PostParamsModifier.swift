@@ -13,12 +13,12 @@ public class PostParamsModifier: NetworkRequestModifier {
     var postParams: [String : Any]?
     var postData: Data?
     
-    init(params: [String : Any]) {
+    public init(params: [String : Any]) {
         postParams = params
         toJson()
     }
     
-    func toJson() {
+    public func toJson() {
         guard let postParams = postParams else {
             return
         }
@@ -37,7 +37,7 @@ public class PostParamsModifier: NetworkRequestModifier {
     }
     
     
-    func configure(request: inout URLRequest, with config: RemoteConfig) {
+    public func configure(request: inout URLRequest, with config: RemoteConfig) {
         guard let body = postData else {
             return
         }

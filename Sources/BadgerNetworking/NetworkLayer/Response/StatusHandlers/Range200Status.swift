@@ -16,16 +16,16 @@ import Foundation
  */
 
 /// This class provides logic to run for URL responses that come back in the 'success' range of 200-299.
-class Range200Status: HTTPStatusHandler {
+public class Range200Status: HTTPStatusHandler {
     
     /// 'Status' is an array of ranges handled by this class. This can be set for a single status code or for an entire range as desired.
-    var status: [Range<Int>] = [200..<300]
+    public var status: [Range<Int>] = [200..<300]
     
     /// Provides logic to run when a response is returned from the api with an http status code in the 'success' range.
     ///
     /// - Parameter response: This is the NetworkResponse object created in the NetworkSession class when URL requests are processed.
     /// This uses 'inout' and modifies the response object instead of creating a copy and returning it.
-    func handleResponse<T>(response: inout NetworkResponse<T>) {
+    public func handleResponse<T>(response: inout NetworkResponse<T>) {
         
         /// If the response actually has data, then try to parse it as JSON into json object/etc.
         if let data = response.data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {

@@ -12,11 +12,11 @@ public class GetParamsModifier: NetworkRequestModifier {
     
     var params: [String : Any]
     
-    init(params: [String : Any]) {
+    public init(params: [String : Any]) {
         self.params = params
     }
     
-    func configure(request: inout URLRequest, with config: RemoteConfig) {
+    public func configure(request: inout URLRequest, with config: RemoteConfig) {
         // get the current base url path for our request
         guard let path = request.url?.absoluteString else {
             print("Failure to add GET parameters to request, unable to parse request path from url: \(String(describing: request.url))")

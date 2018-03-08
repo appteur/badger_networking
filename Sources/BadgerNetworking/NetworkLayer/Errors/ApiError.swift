@@ -33,7 +33,7 @@ public enum ApiError: Error, Equatable, CustomStringConvertible{
     case responseParseError
     case unknownError
     
-    var code: Int {
+    public var code: Int {
         switch self {
         case .apiError(_, _, let code): return (code != nil) ? code! : 677
         case .badRequest:       return 400
@@ -44,7 +44,7 @@ public enum ApiError: Error, Equatable, CustomStringConvertible{
         }
     }
     
-    var description: String {
+    public var description: String {
         switch self {
         case .apiError(let message, _, _):
             return message
@@ -61,7 +61,7 @@ public enum ApiError: Error, Equatable, CustomStringConvertible{
         }
     }
     
-    var errorName: String? {
+    public var errorName: String? {
         switch self {
         case .apiError(_, let errorName, _): return errorName
         default:
@@ -70,7 +70,7 @@ public enum ApiError: Error, Equatable, CustomStringConvertible{
     }
 }
 
-func == (lhs: ApiError, rhs: ApiError) -> Bool {
+public func == (lhs: ApiError, rhs: ApiError) -> Bool {
     switch (lhs, rhs) {
     case (.apiError, .apiError):
         return true

@@ -10,7 +10,7 @@ import Foundation
 
 
 /// This protocol describes a way to provide handling for http responses based on the http status code returned in the response. This is similar to the 'HTTPStatusHandler' protocol below, except that the 'handleResponse' functionality is a property instead of a function. This protocol is currently implemented in the 'StatusHandler' class found in the 'StatusHandlers' subdirectory of the NetworkLayer->Response directory. This implementation is not currently used, but is provided as an alternate way to provide handling for http status codes if desired. If you wish to define handling logic at runtime and switch between processing logic for a given http status code then an implementation of this protocol should be sufficient for that use case. If processing logic can be provided in advance then an implementation of the HTTPStatusHandler class is what you should use.
-protocol ResponseStatusHandler {
+public protocol ResponseStatusHandler {
     
     associatedtype T: JSONParsable
     

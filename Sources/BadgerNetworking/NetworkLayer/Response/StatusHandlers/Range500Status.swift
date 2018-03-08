@@ -10,16 +10,16 @@ import Foundation
 
 
 /// Handler for HTTP status codes in range: 5xx (server error)
-class Range500Status: HTTPStatusHandler {
+public class Range500Status: HTTPStatusHandler {
     
     /// 'Status' is an array of ranges handled by this class. This can be set for a single status code or for an entire range as desired.
-    var status: [Range<Int>] = [500..<600]
+    public var status: [Range<Int>] = [500..<600]
     
     
     /// Logic to run for responses that come back with a server error response status code.
     ///
     /// - Parameter response: The network response to be updated with either a parsed json object or error.
-    func handleResponse<T>(response: inout NetworkResponse<T>) {
+    public func handleResponse<T>(response: inout NetworkResponse<T>) {
         // handle server error here
         // e.g. remedy error and retry
         print(" handle 4xx response here")

@@ -29,7 +29,7 @@ public class NetworkSession: NetworkRequestHandler {
     /// Also sets up reachability for the host to manage network connectivity for the host specified in the configuration.
     ///
     /// - Parameter configuration: The remote configuration to use for setting up this network session
-    init(configuration: RemoteConfig) {
+    public init(configuration: RemoteConfig) {
         self.configuration = configuration
         if let baseURL = configuration.baseURLComponents, let host = baseURL.host {
             print("NetworkSession: launching reachability with host: [\(host)]")
@@ -45,7 +45,7 @@ public class NetworkSession: NetworkRequestHandler {
     ///   - withType: The type of model object expected to be parsed and returned in the response.
     ///   - request: The URL request to process.
     ///   - completion: Handler to run when url request completes or fails.
-    func process<T>(withType: T.Type, request: URLRequest, completion: @escaping (NetworkResponse<T>)->Void) {
+    public func process<T>(withType: T.Type, request: URLRequest, completion: @escaping (NetworkResponse<T>)->Void) {
         
         // check for network availability
         guard let reachability = reachability, reachability.status != .unreachable else {
@@ -138,7 +138,7 @@ public class NetworkSession: NetworkRequestHandler {
     /// - Parameters:
     ///   - path: The path where the image is located.
     ///   - completion: On completion either a valid data object will be returned or nil if not found/loaded.
-    func fetchImage(path: String, completion: @escaping (Data?) -> Void) {
+    public func fetchImage(path: String, completion: @escaping (Data?) -> Void) {
         guard let url = URL.init(string: path) else {
             print("Unable to create url for image download from path: [\(path)]")
             completion(nil)
@@ -153,7 +153,7 @@ public class NetworkSession: NetworkRequestHandler {
     /// - Parameters:
     ///   - url: The url where the image is located.
     ///   - completion: On completion returns either the valid image data or nil.
-    func fetchImage(url: URL, completion: @escaping (Data?) -> Void) {
+    public func fetchImage(url: URL, completion: @escaping (Data?) -> Void) {
         let task = URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             guard let data = data, error == nil else {
                 print("Image Download Anomaly for url: \(url)")
