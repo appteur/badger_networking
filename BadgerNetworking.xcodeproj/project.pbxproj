@@ -1,778 +1,561 @@
 // !$*UTF8*$!
 {
-   archiveVersion = "1";
-   objectVersion = "46";
-   objects = {
-      "BadgerNetworking::BadgerNetworking" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_64";
-         buildPhases = (
-            "OBJ_67",
-            "OBJ_97",
-         );
-         dependencies = (
-         );
-         name = "BadgerNetworking";
-         productName = "BadgerNetworking";
-         productReference = "BadgerNetworking::BadgerNetworking::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "BadgerNetworking::BadgerNetworking::Product" = {
-         isa = "PBXFileReference";
-         path = "BadgerNetworking.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "BadgerNetworking::SwiftPMPackageDescription" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_58";
-         buildPhases = (
-            "OBJ_61",
-         );
-         dependencies = (
-         );
-         name = "BadgerNetworkingPackageDescription";
-         productName = "BadgerNetworkingPackageDescription";
-         productType = "com.apple.product-type.framework";
-      };
-      "OBJ_1" = {
-         isa = "PBXProject";
-         attributes = {
-            LastUpgradeCheck = "9999";
-         };
-         buildConfigurationList = "OBJ_2";
-         compatibilityVersion = "Xcode 3.2";
-         developmentRegion = "English";
-         hasScannedForEncodings = "0";
-         knownRegions = (
-            "en",
-         );
-         mainGroup = "OBJ_5";
-         productRefGroup = "OBJ_55";
-         projectDirPath = ".";
-         targets = (
-            "BadgerNetworking::SwiftPMPackageDescription",
-            "BadgerNetworking::BadgerNetworking",
-         );
-      };
-      "OBJ_10" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_11",
-         );
-         name = "Config";
-         path = "Config";
-         sourceTree = "<group>";
-      };
-      "OBJ_11" = {
-         isa = "PBXFileReference";
-         path = "RemoteConfig.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_12" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_13",
-            "OBJ_14",
-            "OBJ_15",
-         );
-         name = "Errors";
-         path = "Errors";
-         sourceTree = "<group>";
-      };
-      "OBJ_13" = {
-         isa = "PBXFileReference";
-         path = "ApiError.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_14" = {
-         isa = "PBXFileReference";
-         path = "JSONSerializationError.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_15" = {
-         isa = "PBXFileReference";
-         path = "NetworkError.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_16" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_17",
-         );
-         name = "Model";
-         path = "Model";
-         sourceTree = "<group>";
-      };
-      "OBJ_17" = {
-         isa = "PBXFileReference";
-         path = "HttpMethod.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_18" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_19",
-            "OBJ_20",
-         );
-         name = "NetworkSession";
-         path = "NetworkSession";
-         sourceTree = "<group>";
-      };
-      "OBJ_19" = {
-         isa = "PBXFileReference";
-         path = "NetworkRequestHandler.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_2" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_3",
-            "OBJ_4",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_20" = {
-         isa = "PBXFileReference";
-         path = "NetworkSession.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_21" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_22",
-            "OBJ_23",
-            "OBJ_24",
-         );
-         name = "Reachability";
-         path = "Reachability";
-         sourceTree = "<group>";
-      };
-      "OBJ_22" = {
-         isa = "PBXFileReference";
-         path = "NetworkAccessibilityProvider.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_23" = {
-         isa = "PBXFileReference";
-         path = "NetworkReachability.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_24" = {
-         isa = "PBXFileReference";
-         path = "Reachability.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_25" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_26",
-            "OBJ_37",
-         );
-         name = "Request";
-         path = "Request";
-         sourceTree = "<group>";
-      };
-      "OBJ_26" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_27",
-            "OBJ_30",
-            "OBJ_32",
-         );
-         name = "Modifiers";
-         path = "Modifiers";
-         sourceTree = "<group>";
-      };
-      "OBJ_27" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_28",
-            "OBJ_29",
-         );
-         name = "Auth";
-         path = "Auth";
-         sourceTree = "<group>";
-      };
-      "OBJ_28" = {
-         isa = "PBXFileReference";
-         path = "BasicAuth.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_29" = {
-         isa = "PBXFileReference";
-         path = "TokenAuth.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_3" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "NO";
-            DEBUG_INFORMATION_FORMAT = "dwarf";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            ENABLE_NS_ASSERTIONS = "YES";
-            GCC_OPTIMIZATION_LEVEL = "0";
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            ONLY_ACTIVE_ARCH = "YES";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode",
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator",
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
-            SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Debug";
-      };
-      "OBJ_30" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_31",
-         );
-         name = "Headers";
-         path = "Headers";
-         sourceTree = "<group>";
-      };
-      "OBJ_31" = {
-         isa = "PBXFileReference";
-         path = "RequestHeaderModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_32" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_33",
-            "OBJ_34",
-            "OBJ_35",
-            "OBJ_36",
-         );
-         name = "Parameters";
-         path = "Parameters";
-         sourceTree = "<group>";
-      };
-      "OBJ_33" = {
-         isa = "PBXFileReference";
-         path = "FormDataModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_34" = {
-         isa = "PBXFileReference";
-         path = "GETParamsModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_35" = {
-         isa = "PBXFileReference";
-         path = "PostParamsModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_36" = {
-         isa = "PBXFileReference";
-         path = "PostParamsURLEncodedModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_37" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_38",
-            "OBJ_39",
-         );
-         name = "Protocols";
-         path = "Protocols";
-         sourceTree = "<group>";
-      };
-      "OBJ_38" = {
-         isa = "PBXFileReference";
-         path = "NetworkRequestModifier.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_39" = {
-         isa = "PBXFileReference";
-         path = "NetworkRequestProvider.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_4" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            CLANG_ENABLE_OBJC_ARC = "YES";
-            COMBINE_HIDPI_IMAGES = "YES";
-            COPY_PHASE_STRIP = "YES";
-            DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-            DYLIB_INSTALL_NAME_BASE = "@rpath";
-            GCC_OPTIMIZATION_LEVEL = "s";
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_SWIFT_FLAGS = (
-               "-DXcode",
-            );
-            PRODUCT_NAME = "$(TARGET_NAME)";
-            SDKROOT = "macosx";
-            SUPPORTED_PLATFORMS = (
-               "macosx",
-               "iphoneos",
-               "iphonesimulator",
-               "appletvos",
-               "appletvsimulator",
-               "watchos",
-               "watchsimulator",
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE";
-            SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-            USE_HEADERMAP = "NO";
-         };
-         name = "Release";
-      };
-      "OBJ_40" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_41",
-            "OBJ_42",
-            "OBJ_44",
-         );
-         name = "Response";
-         path = "Response";
-         sourceTree = "<group>";
-      };
-      "OBJ_41" = {
-         isa = "PBXFileReference";
-         path = "NetworkResponse.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_42" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_43",
-         );
-         name = "Protocols";
-         path = "Protocols";
-         sourceTree = "<group>";
-      };
-      "OBJ_43" = {
-         isa = "PBXFileReference";
-         path = "ResponseStatusHandler.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_44" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_45",
-            "OBJ_46",
-            "OBJ_47",
-            "OBJ_48",
-            "OBJ_49",
-         );
-         name = "StatusHandlers";
-         path = "StatusHandlers";
-         sourceTree = "<group>";
-      };
-      "OBJ_45" = {
-         isa = "PBXFileReference";
-         path = "Range200Status.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_46" = {
-         isa = "PBXFileReference";
-         path = "Range300Status.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_47" = {
-         isa = "PBXFileReference";
-         path = "Range400Status.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_48" = {
-         isa = "PBXFileReference";
-         path = "Range500Status.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_49" = {
-         isa = "PBXFileReference";
-         path = "StatusHandler.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_5" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_6",
-            "OBJ_7",
-            "OBJ_54",
-            "OBJ_55",
-         );
-         path = "";
-         sourceTree = "<group>";
-      };
-      "OBJ_50" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_51",
-            "OBJ_52",
-            "OBJ_53",
-         );
-         name = "Protocols";
-         path = "Protocols";
-         sourceTree = "<group>";
-      };
-      "OBJ_51" = {
-         isa = "PBXFileReference";
-         path = "DictionaryConvertable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_52" = {
-         isa = "PBXFileReference";
-         path = "JSONParsable.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_53" = {
-         isa = "PBXFileReference";
-         path = "NetworkRequestRouter.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_54" = {
-         isa = "PBXGroup";
-         children = (
-         );
-         name = "Tests";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_55" = {
-         isa = "PBXGroup";
-         children = (
-            "BadgerNetworking::BadgerNetworking::Product",
-         );
-         name = "Products";
-         path = "";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "OBJ_58" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_59",
-            "OBJ_60",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_59" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_6" = {
-         isa = "PBXFileReference";
-         explicitFileType = "sourcecode.swift";
-         path = "Package.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_60" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "3",
-               "-I",
-               "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk",
-            );
-            SWIFT_VERSION = "3.0";
-         };
-         name = "Release";
-      };
-      "OBJ_61" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_62",
-         );
-      };
-      "OBJ_62" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
-      };
-      "OBJ_64" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_65",
-            "OBJ_66",
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Debug";
-      };
-      "OBJ_65" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "BadgerNetworking.xcodeproj/BadgerNetworking_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "BadgerNetworking";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "3.0";
-            TARGET_NAME = "BadgerNetworking";
-         };
-         name = "Debug";
-      };
-      "OBJ_66" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks",
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)",
-            );
-            INFOPLIST_FILE = "BadgerNetworking.xcodeproj/BadgerNetworking_Info.plist";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)",
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)",
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "BadgerNetworking";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_VERSION = "3.0";
-            TARGET_NAME = "BadgerNetworking";
-         };
-         name = "Release";
-      };
-      "OBJ_67" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_68",
-            "OBJ_69",
-            "OBJ_70",
-            "OBJ_71",
-            "OBJ_72",
-            "OBJ_73",
-            "OBJ_74",
-            "OBJ_75",
-            "OBJ_76",
-            "OBJ_77",
-            "OBJ_78",
-            "OBJ_79",
-            "OBJ_80",
-            "OBJ_81",
-            "OBJ_82",
-            "OBJ_83",
-            "OBJ_84",
-            "OBJ_85",
-            "OBJ_86",
-            "OBJ_87",
-            "OBJ_88",
-            "OBJ_89",
-            "OBJ_90",
-            "OBJ_91",
-            "OBJ_92",
-            "OBJ_93",
-            "OBJ_94",
-            "OBJ_95",
-            "OBJ_96",
-         );
-      };
-      "OBJ_68" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_11";
-      };
-      "OBJ_69" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_13";
-      };
-      "OBJ_7" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_8",
-         );
-         name = "Sources";
-         path = "";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_70" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
-      };
-      "OBJ_71" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_15";
-      };
-      "OBJ_72" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_17";
-      };
-      "OBJ_73" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
-      };
-      "OBJ_74" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_20";
-      };
-      "OBJ_75" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
-      };
-      "OBJ_76" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_23";
-      };
-      "OBJ_77" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_24";
-      };
-      "OBJ_78" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_28";
-      };
-      "OBJ_79" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_29";
-      };
-      "OBJ_8" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_9",
-            "OBJ_50",
-         );
-         name = "BadgerNetworking";
-         path = "Sources/BadgerNetworking";
-         sourceTree = "SOURCE_ROOT";
-      };
-      "OBJ_80" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_31";
-      };
-      "OBJ_81" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_33";
-      };
-      "OBJ_82" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_83" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_35";
-      };
-      "OBJ_84" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_36";
-      };
-      "OBJ_85" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
-      };
-      "OBJ_86" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
-      };
-      "OBJ_87" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_41";
-      };
-      "OBJ_88" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_43";
-      };
-      "OBJ_89" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_45";
-      };
-      "OBJ_9" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_10",
-            "OBJ_12",
-            "OBJ_16",
-            "OBJ_18",
-            "OBJ_21",
-            "OBJ_25",
-            "OBJ_40",
-         );
-         name = "NetworkLayer";
-         path = "NetworkLayer";
-         sourceTree = "<group>";
-      };
-      "OBJ_90" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_46";
-      };
-      "OBJ_91" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_47";
-      };
-      "OBJ_92" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_48";
-      };
-      "OBJ_93" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_49";
-      };
-      "OBJ_94" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_51";
-      };
-      "OBJ_95" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_52";
-      };
-      "OBJ_96" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_53";
-      };
-      "OBJ_97" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
-      };
-   };
-   rootObject = "OBJ_1";
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		OBJ_62 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_68 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* RemoteConfig.swift */; };
+		OBJ_69 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ApiError.swift */; };
+		OBJ_70 /* JSONSerializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* JSONSerializationError.swift */; };
+		OBJ_71 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* NetworkError.swift */; };
+		OBJ_72 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HttpMethod.swift */; };
+		OBJ_73 /* NetworkRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* NetworkRequestHandler.swift */; };
+		OBJ_74 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* NetworkSession.swift */; };
+		OBJ_75 /* NetworkAccessibilityProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* NetworkAccessibilityProvider.swift */; };
+		OBJ_76 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* NetworkReachability.swift */; };
+		OBJ_77 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Reachability.swift */; };
+		OBJ_78 /* BasicAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* BasicAuth.swift */; };
+		OBJ_79 /* TokenAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* TokenAuth.swift */; };
+		OBJ_80 /* RequestHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* RequestHeaderModifier.swift */; };
+		OBJ_81 /* FormDataModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* FormDataModifier.swift */; };
+		OBJ_82 /* GETParamsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* GETParamsModifier.swift */; };
+		OBJ_83 /* PostParamsModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* PostParamsModifier.swift */; };
+		OBJ_84 /* PostParamsURLEncodedModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PostParamsURLEncodedModifier.swift */; };
+		OBJ_85 /* NetworkRequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* NetworkRequestModifier.swift */; };
+		OBJ_86 /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* NetworkRequestProvider.swift */; };
+		OBJ_87 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* NetworkResponse.swift */; };
+		OBJ_88 /* ResponseStatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ResponseStatusHandler.swift */; };
+		OBJ_89 /* Range200Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Range200Status.swift */; };
+		OBJ_90 /* Range300Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Range300Status.swift */; };
+		OBJ_91 /* Range400Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Range400Status.swift */; };
+		OBJ_92 /* Range500Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Range500Status.swift */; };
+		OBJ_93 /* StatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* StatusHandler.swift */; };
+		OBJ_94 /* DictionaryConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* DictionaryConvertable.swift */; };
+		OBJ_95 /* JSONParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* JSONParsable.swift */; };
+		OBJ_96 /* NetworkRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* NetworkRequestRouter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		"BadgerNetworking::BadgerNetworking::Product" /* BadgerNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BadgerNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
+		OBJ_13 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		OBJ_14 /* JSONSerializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializationError.swift; sourceTree = "<group>"; };
+		OBJ_15 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		OBJ_17 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		OBJ_19 /* NetworkRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestHandler.swift; sourceTree = "<group>"; };
+		OBJ_20 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		OBJ_22 /* NetworkAccessibilityProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAccessibilityProvider.swift; sourceTree = "<group>"; };
+		OBJ_23 /* NetworkReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		OBJ_28 /* BasicAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAuth.swift; sourceTree = "<group>"; };
+		OBJ_29 /* TokenAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenAuth.swift; sourceTree = "<group>"; };
+		OBJ_31 /* RequestHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHeaderModifier.swift; sourceTree = "<group>"; };
+		OBJ_33 /* FormDataModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormDataModifier.swift; sourceTree = "<group>"; };
+		OBJ_34 /* GETParamsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GETParamsModifier.swift; sourceTree = "<group>"; };
+		OBJ_35 /* PostParamsModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParamsModifier.swift; sourceTree = "<group>"; };
+		OBJ_36 /* PostParamsURLEncodedModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostParamsURLEncodedModifier.swift; sourceTree = "<group>"; };
+		OBJ_38 /* NetworkRequestModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestModifier.swift; sourceTree = "<group>"; };
+		OBJ_39 /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
+		OBJ_41 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ResponseStatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatusHandler.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Range200Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range200Status.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Range300Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range300Status.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Range400Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range400Status.swift; sourceTree = "<group>"; };
+		OBJ_48 /* Range500Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Range500Status.swift; sourceTree = "<group>"; };
+		OBJ_49 /* StatusHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
+		OBJ_51 /* DictionaryConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryConvertable.swift; sourceTree = "<group>"; };
+		OBJ_52 /* JSONParsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsable.swift; sourceTree = "<group>"; };
+		OBJ_53 /* NetworkRequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestRouter.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D41593D2051CC1400FA1994 /* ParsingAndConversions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* DictionaryConvertable.swift */,
+				OBJ_52 /* JSONParsable.swift */,
+			);
+			path = ParsingAndConversions;
+			sourceTree = "<group>";
+		};
+		5D41593E2051CC3B00FA1994 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_53 /* NetworkRequestRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		5D41593F2051CC5A00FA1994 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_38 /* NetworkRequestModifier.swift */,
+				OBJ_39 /* NetworkRequestProvider.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5D4159402051CC6100FA1994 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* ResponseStatusHandler.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		5D4159412051CCD300FA1994 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* NetworkAccessibilityProvider.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		5D4159422051CF6200FA1994 /* NetworkSession */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* NetworkRequestHandler.swift */,
+			);
+			path = NetworkSession;
+			sourceTree = "<group>";
+		};
+		OBJ_10 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* RemoteConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		OBJ_12 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* ApiError.swift */,
+				OBJ_14 /* JSONSerializationError.swift */,
+				OBJ_15 /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* HttpMethod.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* NetworkSession.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		OBJ_21 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* NetworkReachability.swift */,
+				OBJ_24 /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* Modifiers */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* Auth */,
+				OBJ_30 /* Headers */,
+				OBJ_32 /* Parameters */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* BasicAuth.swift */,
+				OBJ_29 /* TokenAuth.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		OBJ_30 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_31 /* RequestHeaderModifier.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		OBJ_32 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_33 /* FormDataModifier.swift */,
+				OBJ_34 /* GETParamsModifier.swift */,
+				OBJ_35 /* PostParamsModifier.swift */,
+				OBJ_36 /* PostParamsURLEncodedModifier.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		OBJ_40 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_41 /* NetworkResponse.swift */,
+				OBJ_44 /* StatusHandlers */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		OBJ_44 /* StatusHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* Range200Status.swift */,
+				OBJ_46 /* Range300Status.swift */,
+				OBJ_47 /* Range400Status.swift */,
+				OBJ_48 /* Range500Status.swift */,
+				OBJ_49 /* StatusHandler.swift */,
+			);
+			path = StatusHandlers;
+			sourceTree = "<group>";
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_54 /* Tests */,
+				OBJ_55 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5D4159422051CF6200FA1994 /* NetworkSession */,
+				5D4159412051CCD300FA1994 /* Reachability */,
+				5D4159402051CC6100FA1994 /* Response */,
+				5D41593F2051CC5A00FA1994 /* Requests */,
+				5D41593E2051CC3B00FA1994 /* Routing */,
+				5D41593D2051CC1400FA1994 /* ParsingAndConversions */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_54 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"BadgerNetworking::BadgerNetworking::Product" /* BadgerNetworking.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* BadgerNetworking */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* BadgerNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* Config */,
+				OBJ_12 /* Errors */,
+				OBJ_16 /* Model */,
+				OBJ_18 /* Session */,
+				OBJ_21 /* Reachability */,
+				OBJ_25 /* Request */,
+				OBJ_40 /* Response */,
+				OBJ_50 /* Protocols */,
+			);
+			name = BadgerNetworking;
+			path = Sources/BadgerNetworking;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"BadgerNetworking::BadgerNetworking" /* BadgerNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_64 /* Build configuration list for PBXNativeTarget "BadgerNetworking" */;
+			buildPhases = (
+				OBJ_67 /* Sources */,
+				OBJ_97 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BadgerNetworking;
+			productName = BadgerNetworking;
+			productReference = "BadgerNetworking::BadgerNetworking::Product" /* BadgerNetworking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"BadgerNetworking::SwiftPMPackageDescription" /* BadgerNetworkingPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_58 /* Build configuration list for PBXNativeTarget "BadgerNetworkingPackageDescription" */;
+			buildPhases = (
+				OBJ_61 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BadgerNetworkingPackageDescription;
+			productName = BadgerNetworkingPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					"BadgerNetworking::BadgerNetworking" = {
+						LastSwiftMigration = 0920;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "BadgerNetworking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"BadgerNetworking::SwiftPMPackageDescription" /* BadgerNetworkingPackageDescription */,
+				"BadgerNetworking::BadgerNetworking" /* BadgerNetworking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_62 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* RemoteConfig.swift in Sources */,
+				OBJ_69 /* ApiError.swift in Sources */,
+				OBJ_70 /* JSONSerializationError.swift in Sources */,
+				OBJ_71 /* NetworkError.swift in Sources */,
+				OBJ_72 /* HttpMethod.swift in Sources */,
+				OBJ_73 /* NetworkRequestHandler.swift in Sources */,
+				OBJ_74 /* NetworkSession.swift in Sources */,
+				OBJ_75 /* NetworkAccessibilityProvider.swift in Sources */,
+				OBJ_76 /* NetworkReachability.swift in Sources */,
+				OBJ_77 /* Reachability.swift in Sources */,
+				OBJ_78 /* BasicAuth.swift in Sources */,
+				OBJ_79 /* TokenAuth.swift in Sources */,
+				OBJ_80 /* RequestHeaderModifier.swift in Sources */,
+				OBJ_81 /* FormDataModifier.swift in Sources */,
+				OBJ_82 /* GETParamsModifier.swift in Sources */,
+				OBJ_83 /* PostParamsModifier.swift in Sources */,
+				OBJ_84 /* PostParamsURLEncodedModifier.swift in Sources */,
+				OBJ_85 /* NetworkRequestModifier.swift in Sources */,
+				OBJ_86 /* NetworkRequestProvider.swift in Sources */,
+				OBJ_87 /* NetworkResponse.swift in Sources */,
+				OBJ_88 /* ResponseStatusHandler.swift in Sources */,
+				OBJ_89 /* Range200Status.swift in Sources */,
+				OBJ_90 /* Range300Status.swift in Sources */,
+				OBJ_91 /* Range400Status.swift in Sources */,
+				OBJ_92 /* Range500Status.swift in Sources */,
+				OBJ_93 /* StatusHandler.swift in Sources */,
+				OBJ_94 /* DictionaryConvertable.swift in Sources */,
+				OBJ_95 /* JSONParsable.swift in Sources */,
+				OBJ_96 /* NetworkRequestRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 3 -I /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/pm/3 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		OBJ_65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BadgerNetworking.xcodeproj/BadgerNetworking_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BadgerNetworking;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BadgerNetworking;
+			};
+			name = Debug;
+		};
+		OBJ_66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = BadgerNetworking.xcodeproj/BadgerNetworking_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = BadgerNetworking;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = BadgerNetworking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "BadgerNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_58 /* Build configuration list for PBXNativeTarget "BadgerNetworkingPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_59 /* Debug */,
+				OBJ_60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_64 /* Build configuration list for PBXNativeTarget "BadgerNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_65 /* Debug */,
+				OBJ_66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
 }

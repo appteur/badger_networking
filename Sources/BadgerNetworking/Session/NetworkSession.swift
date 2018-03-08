@@ -9,8 +9,8 @@
 import Foundation
 
 
-/*
-    Provides high level processing for requests. The type that applies to all requests.
+/**
+    Provides high level processing for network requests. 
  */
 public class NetworkSession: NetworkRequestHandler {
     
@@ -23,7 +23,6 @@ public class NetworkSession: NetworkRequestHandler {
     /// Enable or disable successful logs for all requests.
     /// (no logs in release regardless of setting, and requests w/o response of 200 are automatically logged for debugging)
     let logRequests = true
-    
     
     /// Sets up network session class and configures for the specified host based on the remote configuration received.
     /// Also sets up reachability for the host to manage network connectivity for the host specified in the configuration.
@@ -49,7 +48,10 @@ public class NetworkSession: NetworkRequestHandler {
         
         // check for network availability
         guard let reachability = reachability, reachability.status != .unreachable else {
+            
             print("NetworkSession: Host reachability error, bailing")
+            
+            // return a network response with error property set
             completion(NetworkResponse.init(error: NetworkError.networkUnreachable))
             return
         }
@@ -64,7 +66,7 @@ public class NetworkSession: NetworkRequestHandler {
                 return
             }
             
-            // create the response we'll return
+            // create a network response object for this request
             var dataResponse = NetworkResponse<T>(error: error, data: data)
             
             // check for/handle request errors on global request scale (currently just logging)
@@ -112,7 +114,7 @@ public class NetworkSession: NetworkRequestHandler {
     ///                         completion.
     func processForStatus<T>(response: inout NetworkResponse<T>) {
         
-        guard let status = response.response?.statusCode else {
+        guard response.statusCode > 0 else {
             return
         }
         
@@ -124,7 +126,7 @@ public class NetworkSession: NetworkRequestHandler {
         ]
         
         for handler in handlers {
-            if handler.canProcessStatus(status) {
+            if handler.canProcessStatus(response.status) {
                 handler.handleResponse(response: &response)
                 return
             }

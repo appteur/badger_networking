@@ -9,10 +9,10 @@
 import Foundation
 
 
-/// Encapsulates configuration data used to setup and configure a network session, or requests to a given host.
+/// Encapsulates configuration data used to setup and configure a network session.
 public struct RemoteConfig {
     
-    /// URL components specifying the base url, created from the 'baseURL' string passed in on struct initialization.
+    /// URL components specifying the base url, created from the 'basePath' string passed in on initialization.
     public var baseURLComponents: URLComponents?
     
     /// Provides the base path for the configured host. Pulls from the baseURLComponents property.
