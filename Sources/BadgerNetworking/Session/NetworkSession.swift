@@ -15,14 +15,16 @@ import Foundation
 public class NetworkSession: NetworkRequestHandler {
     
     /// The remote configuration for this network session.
-    var configuration: RemoteConfig?
+    var configuration: RemoteConfig
     
     /// This monitors network connectivity for this network session.
     internal var reachability: NetworkAccessibilityProvider?
     
-    /// Enable or disable successful logs for all requests.
-    /// (no logs in release regardless of setting, and requests w/o response of 200 are automatically logged for debugging)
-    let logRequests = true
+    /// Interceptors in this array will be run on responses run through this session in order.
+    public var responseInterceptors: [ResponseInterceptor] = [
+        ResponseLogger(),       // logs responses to the console
+        ResponseSerializer()    // parses response json into objects
+    ]
     
     /// Sets up network session class and configures for the specified host based on the remote configuration received.
     /// Also sets up reachability for the host to manage network connectivity for the host specified in the configuration.
@@ -30,7 +32,7 @@ public class NetworkSession: NetworkRequestHandler {
     /// - Parameter configuration: The remote configuration to use for setting up this network session
     public init(configuration: RemoteConfig) {
         self.configuration = configuration
-        if let baseURL = configuration.baseURLComponents, let host = baseURL.host {
+        if configuration.enableReachability, let baseURL = configuration.baseURLComponents, let host = baseURL.host {
             print("NetworkSession: launching reachability with host: [\(host)]")
             reachability = NetworkReachability.init(host: host)
         }
@@ -46,13 +48,15 @@ public class NetworkSession: NetworkRequestHandler {
     ///   - completion: Handler to run when url request completes or fails.
     public func process<T>(withType: T.Type, request: URLRequest, completion: @escaping (NetworkResponse<T>)->Void) {
         
-        // check for network availability
-        guard let reachability = reachability, reachability.status != .unreachable else {
+        // check for network availability if enabled
+        if configuration.enableReachability, let reachability = reachability, reachability.status != .unreachable {
             
             print("NetworkSession: Host reachability error, bailing")
             
+            // TODO: setup automatic retry?
+            
             // return a network response with error property set
-            completion(NetworkResponse.init(error: NetworkError.networkUnreachable))
+            completion(NetworkResponse.init(error: NetworkError.networkUnreachable, request: request))
             return
         }
         
@@ -62,40 +66,26 @@ public class NetworkSession: NetworkRequestHandler {
         // process request
         let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
             
-            guard let weakself = self else {
+            guard let strongself = self else {
                 return
             }
             
             // create a network response object for this request
-            var dataResponse = NetworkResponse<T>(error: error, data: data)
+            var dataResponse = NetworkResponse<T>(response: response, error: error, data: data, request: request)
             
             // check for/handle request errors on global request scale (currently just logging)
-            guard error == nil else  {
-                dataResponse.error = error
-                weakself.handleError(error: error!)
+            if dataResponse.error != nil {
                 completion(dataResponse)
                 return
             }
-            
-            guard let httpResponse = response as? HTTPURLResponse else {
-                print("NetworkSession: Unable to validate response")
-                dataResponse.error = NetworkError.responseError
-                completion(dataResponse)
-                return
-            }
-            
-            print("NetworkSession: [\(String(describing: request.url))] Response Code: \(httpResponse.statusCode)")
-            // set response status code
-            dataResponse.statusCode = httpResponse.statusCode
-            
-            // log requests if enabled
-            weakself.logRawRequest(data: data! as Data, responseCode: httpResponse.statusCode)
 
-            // update response object
-            dataResponse.response = httpResponse
+            // run response interceptors
+            for interceptor in strongself.responseInterceptors {
+                interceptor.handleResponse(response: &dataResponse)
+            }
             
             // process based on http response status code (sets parsed object on NetworkResponse object)
-            weakself.processForStatus(response: &dataResponse)
+//            strongself.processForStatus(response: &dataResponse)
             
             // complete & return our data response object
             completion(dataResponse)
@@ -126,7 +116,7 @@ public class NetworkSession: NetworkRequestHandler {
         ]
         
         for handler in handlers {
-            if handler.canProcessStatus(response.status) {
+            if handler.canProcessStatus(response.statusCode) {
                 handler.handleResponse(response: &response)
                 return
             }
@@ -166,33 +156,5 @@ public class NetworkSession: NetworkRequestHandler {
             completion(data)
         })
         task.resume()
-    }
-
-}
-
-// MARK: Logging & Error Handling
-extension NetworkSession {
-    
-    /// Provides global error handling for all responses from the server. 
-    /// This handles network errors, not api errors.
-    ///
-    /// - Parameter error: The error thrown, to be processed.
-    func handleError(error:Error) {
-        print("NetworkSession: TODO: handle response error: \(error)")
-    }
-    
-    /// Convenience function for logging of requests and keeping code cleaner.
-    ///
-    /// - Parameters:
-    ///   - data: Response data to be logged to the console.
-    ///   - responseCode: The response code for the response being logged. Used to automatically log all
-    ///                     responses that are not successful.
-    func logRawRequest(data:Data, responseCode:Int) {
-//        #if DEBUG
-            if logRequests == true || (responseCode != 200) {
-                let returnStr = String.init(data: data, encoding: String.Encoding.utf8)
-                print("LogRawRequest: \(String(describing: returnStr))")
-            }
-//        #endif
     }
 }

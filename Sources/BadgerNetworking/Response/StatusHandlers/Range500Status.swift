@@ -22,7 +22,7 @@ public class Range500Status: HTTPStatusHandler {
     public func handleResponse<T>(response: inout NetworkResponse<T>) {
         // handle server error here
         // e.g. remedy error and retry
-        print(" handle 4xx response here")
+        print(" handle 5xx response here")
         
         // if we have response data, try to parse it out as a json object
         if let data = response.data, let json = try? JSONSerialization.jsonObject(with: data, options: []) {

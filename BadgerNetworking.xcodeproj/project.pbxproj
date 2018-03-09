@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D4159442051EB6500FA1994 /* ResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4159432051EB6500FA1994 /* ResponseSerializer.swift */; };
+		5D4159472051F9DE00FA1994 /* ResponseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4159462051F9DE00FA1994 /* ResponseLogger.swift */; };
 		OBJ_62 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_68 /* RemoteConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* RemoteConfig.swift */; };
 		OBJ_69 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ApiError.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D4159432051EB6500FA1994 /* ResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseSerializer.swift; sourceTree = "<group>"; };
+		5D4159462051F9DE00FA1994 /* ResponseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseLogger.swift; sourceTree = "<group>"; };
 		"BadgerNetworking::BadgerNetworking::Product" /* BadgerNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BadgerNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_11 /* RemoteConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfig.swift; sourceTree = "<group>"; };
 		OBJ_13 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 				OBJ_19 /* NetworkRequestHandler.swift */,
 			);
 			path = NetworkSession;
+			sourceTree = "<group>";
+		};
+		5D4159452051F95700FA1994 /* Interceptors */ = {
+			isa = PBXGroup;
+			children = (
+				5D4159432051EB6500FA1994 /* ResponseSerializer.swift */,
+				5D4159462051F9DE00FA1994 /* ResponseLogger.swift */,
+			);
+			path = Interceptors;
 			sourceTree = "<group>";
 		};
 		OBJ_10 /* Config */ = {
@@ -227,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_41 /* NetworkResponse.swift */,
+				5D4159452051F95700FA1994 /* Interceptors */,
 				OBJ_44 /* StatusHandlers */,
 			);
 			path = Response;
@@ -399,6 +413,7 @@
 				OBJ_80 /* RequestHeaderModifier.swift in Sources */,
 				OBJ_81 /* FormDataModifier.swift in Sources */,
 				OBJ_82 /* GETParamsModifier.swift in Sources */,
+				5D4159472051F9DE00FA1994 /* ResponseLogger.swift in Sources */,
 				OBJ_83 /* PostParamsModifier.swift in Sources */,
 				OBJ_84 /* PostParamsURLEncodedModifier.swift in Sources */,
 				OBJ_85 /* NetworkRequestModifier.swift in Sources */,
@@ -410,6 +425,7 @@
 				OBJ_91 /* Range400Status.swift in Sources */,
 				OBJ_92 /* Range500Status.swift in Sources */,
 				OBJ_93 /* StatusHandler.swift in Sources */,
+				5D4159442051EB6500FA1994 /* ResponseSerializer.swift in Sources */,
 				OBJ_94 /* DictionaryConvertable.swift in Sources */,
 				OBJ_95 /* JSONParsable.swift in Sources */,
 				OBJ_96 /* NetworkRequestRouter.swift in Sources */,
