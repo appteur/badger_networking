@@ -360,6 +360,7 @@
 		OBJ_1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 9999;
 				TargetAttributes = {
 					"BadgerNetworking::BadgerNetworking" = {
@@ -373,6 +374,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = OBJ_5 /*  */;
 			productRefGroup = OBJ_55 /* Products */;

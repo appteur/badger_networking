@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import Cocoa
-
 
 /// Specifies functionality that should be implemented in objects providing routing information for api requests.
 public protocol NetworkRequestRouter {

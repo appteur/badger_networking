@@ -31,13 +31,16 @@ public class NetworkSession: NetworkRequestHandler {
     ///
     /// - Parameter configuration: The remote configuration to use for setting up this network session
     public init(configuration: RemoteConfig) {
+        
+        // set configuration
         self.configuration = configuration
+        
+        // enable reachability if the flag on the configuration object is set to true
         if configuration.enableReachability, let baseURL = configuration.baseURLComponents, let host = baseURL.host {
             print("NetworkSession: launching reachability with host: [\(host)]")
             reachability = NetworkReachability.init(host: host)
         }
     }
-    
     
     /// Handles the main processing of the network request. The generic type specifies the type of object the caller expects to be
     /// returned as a parsed json object, as the 'object' property of the NetworkResponse object that is returned in the completion.
@@ -60,8 +63,7 @@ public class NetworkSession: NetworkRequestHandler {
             return
         }
         
-        // TODO: add to queue, queue completions when multiple requests are sent
-        // to the same url
+        // TODO: Create completion queue to handle multiple requests sent to the same url
         
         // process request
         let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
@@ -95,7 +97,6 @@ public class NetworkSession: NetworkRequestHandler {
         task.resume()
     }
     
-    
     /// Provides uniform processing based on http response status codes. You define the ranges of codes to handle in the
     /// class instances, and the logic to process for each response status code.
     ///
@@ -122,9 +123,11 @@ public class NetworkSession: NetworkRequestHandler {
             }
         }
     }
+}
+
+//MARK: Image Download Handling
+extension NetworkSession {
     
-    
-    //MARK: handle image download requests
     /// Simple image downloader for image requests. This version takes a path and calls the url version of this function.
     ///
     /// - Parameters:
@@ -138,7 +141,6 @@ public class NetworkSession: NetworkRequestHandler {
         }
         fetchImage(url: url, completion: completion)
     }
-    
     
     /// Simple image downloader for image requests that takes a URL object instead of a path.
     ///
