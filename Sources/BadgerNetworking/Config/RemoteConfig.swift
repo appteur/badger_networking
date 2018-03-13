@@ -12,7 +12,7 @@ import Foundation
 /// Encapsulates configuration data used to setup and configure a network session.
 public struct RemoteConfig {
     
-    // set to false if you do not want to use reachability
+    /// Flag to enable/disable reachability monitoring of the base URL.
     public var enableReachability: Bool = true
     
     /// URL components specifying the base url, created from the 'basePath' string passed in on initialization.
